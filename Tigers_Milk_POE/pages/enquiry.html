@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | Tiger's Milk Moffett on Main</title>
+    <meta name="description" content="Book a table at Tiger's Milk Moffett on Main in Gqeberha.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="site-nav">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/tigers-milk-logo.jpg" alt="Logo" style="max-height: 60px;">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="menu.html">MENU</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="enquiry.html" class="active">BOOKINGS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>BOOK A <span>TABLE</span></h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="form-container">
+                <form id="bookingForm" action="#" method="post" class="form-grid">
+                    <div class="form-group full">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="0410000000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Booking Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="6">6+ Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="message">Special Requests</label>
+                        <textarea id="message" name="message" placeholder="Dietary requirements or special notes"></textarea>
+                    </div>
+
+                    <div class="form-group full">
+                        <button type="submit" class="btn btn-primary">SUBMIT BOOKING</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="copyright">&copy; 2026 Tiger's Milk Moffett on Main. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,998 @@
+/* =====================================================
+   TIGER'S MILK - PART 2
+   GREY / BLACK / ORANGE THEME
+   ===================================================== */
+
+
+/* ---------- CSS RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- COLOUR VARIABLES ---------- */
+
+:root {
+    --black: #111111;
+    --dark-grey: #222222;
+    --grey: #555555;
+    --light-grey: #d9d9d9;
+    --background-grey: #eeeeee;
+    --white: #ffffff;
+    --orange: #f47b20;
+    --dark-orange: #c95d0d;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-grey);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.6;
+
+    /* Centre all normal text */
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   HEADER / NAVIGATION
+   ===================================================== */
+
+.site-header {
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+}
+
+.site-nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.logo {
+   
+
+    color: var(--orange);
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: (white);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-links a:focus {
+    outline: 2px solid var(--orange);
+}
+
+.nav-links a:active {
+    color: var(--dark-orange);
+}
+
+.nav-links .active {
+    color: var(--orange);
+}
+
+
+/* ---------- MOBILE MENU ---------- */
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    font-size: 30px;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../assets/tiger-milk-PE-front-page.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   EYEBROW
+   ===================================================== */
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+
+    border: 2px solid var(--orange);
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    background-color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+.btn:focus {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+   ===================================================== */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.intro > div {
+    width: 100%;
+}
+
+.intro p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+
+/* =====================================================
+   FEATURE CARDS
+   ===================================================== */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    justify-items: center;
+}
+
+.feature-card {
+    width: 100%;
+    background-color: var(--white);
+
+    border: 2px solid var(--light-grey);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--orange);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.feature-card div {
+    padding: 25px;
+}
+
+.feature-card span {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.feature-card p {
+    color: var(--grey);
+    margin-bottom: 15px;
+}
+
+.feature-card a {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.feature-card a:hover {
+    color: var(--dark-orange);
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   DARK SECTION
+   ===================================================== */
+
+.dark-section {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.dark-section h2 {
+    color: var(--white);
+}
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+/* =====================================================
+   PAGE HERO
+   ===================================================== */
+
+.page-hero {
+    min-height: 45vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../assets/tiger-milk-restaurant-bar.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.page-hero h1 {
+    color: var(--white);
+}
+
+.page-hero h1 span {
+    color: var(--orange);
+}
+
+
+/* =====================================================
+   ABOUT / SPLIT SECTIONS
+   ===================================================== */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.split > div {
+    width: 100%;
+}
+
+.split p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   VALUES
+   ===================================================== */
+
+.values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.value-list {
+    display: grid;
+    gap: 20px;
+}
+
+.value-list article {
+    padding: 25px;
+
+    border: 2px solid var(--grey);
+
+    background-color: var(--dark-grey);
+}
+
+.value-list strong {
+    color: var(--orange);
+}
+
+.value-list h3 {
+    color: var(--white);
+}
+
+.value-list p {
+    color: var(--light-grey);
+}
+
+
+/* =====================================================
+   IMAGE + TEXT
+   ===================================================== */
+
+.image-text {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.image-text img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.image-text p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.text-link {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+.menu-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    text-align: center;
+}
+
+.menu-category {
+    background-color: var(--white);
+
+    padding: 30px;
+
+    border-top: 5px solid var(--orange);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.menu-category h2 {
+    color: var(--black);
+}
+
+.menu-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.menu-item h3 {
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    color: var(--grey);
+    margin: 0;
+}
+
+.menu-item strong {
+    color: var(--orange);
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   GALLERY
+   ===================================================== */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-auto-rows: 280px;
+    justify-items: center;
+
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+
+    background-color: var(--black);
+
+    margin: 0;
+
+    border: 3px solid var(--black);
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.gallery-item:hover {
+    border-color: var(--orange);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   FORMS
+   ===================================================== */
+
+.form-container {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1rem;
+
+    border: 2px solid var(--light-grey);
+
+    background-color: var(--white);
+
+    text-align: center;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 3px solid var(--orange);
+
+    border-color: var(--orange);
+}
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-card {
+    background-color: var(--white);
+
+    padding: 30px;
+
+    border-top: 5px solid var(--orange);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    color: var(--black);
+}
+
+.contact-card p {
+    color: var(--grey);
+}
+
+.contact-card a {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    color: var(--dark-orange);
+}
+
+
+/* =====================================================
+   NOTICE
+   ===================================================== */
+
+.note {
+    background-color: var(--light-grey);
+
+    border-left: 5px solid var(--orange);
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.site-footer {
+    background-color: var(--black);
+
+    color: var(--white);
+
+    padding: 60px 0 20px;
+
+    text-align: center;
+}
+
+.footer-inner {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+
+    justify-items: center;
+}
+
+.footer-inner h3 {
+    color: var(--orange);
+}
+
+.footer-inner p {
+    color: var(--light-grey);
+}
+
+.footer-inner a:not(.logo) {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.footer-inner a:hover {
+    color: var(--orange);
+}
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+.copyright {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--grey);
+
+    color: #aaaaaa;
+
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro,
+    .split,
+    .values,
+    .image-text {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media screen and (max-width: 650px) {
+
+    .site-nav {
+        min-height: 70px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: var(--black);
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 5%;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        border-bottom: 1px solid var(--grey);
+
+        padding: 15px;
+    }
+
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+
+    .hero {
+        min-height: 75vh;
+    }
+
+
+    .section {
+        padding: 50px 0;
+    }
+
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 250px;
+    }
+
+    .gallery-item.large {
+        grid-column: span 1;
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+
+    .menu-item {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+}
